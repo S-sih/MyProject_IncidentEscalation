@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram name="Component Diagram - Microservices" id="incident-component-diagram">
+    <mxGraphModel dx="1431" dy="732" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="system" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontStyle=1;verticalAlign=top;align=center;spacingTop=12;" value="Incident Escalation &amp; On-Call Rotation Engine&#xa;Microservices Architecture" vertex="1">
+          <mxGeometry height="690" width="1160" x="120" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="alert" parent="1" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="&lt;&lt;component&gt;&gt;&#xa;Alert Ingestion Service" vertex="1">
+          <mxGeometry height="100" width="250" x="190" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="incident" parent="1" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="&lt;&lt;component&gt;&gt;&#xa;Incident &amp; Escalation Service" vertex="1">
+          <mxGeometry height="100" width="280" x="540" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="rotation" parent="1" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="&lt;&lt;component&gt;&gt;&#xa;On-Call Rotation Service" vertex="1">
+          <mxGeometry height="100" width="250" x="920" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="notification" parent="1" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="&lt;&lt;component&gt;&gt;&#xa;Notification Service" vertex="1">
+          <mxGeometry height="100" width="250" x="365" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="postmortem" parent="1" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="&lt;&lt;component&gt;&gt;&#xa;Post-Mortem Service" vertex="1">
+          <mxGeometry height="100" width="250" x="750" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="i1" edge="1" parent="1" source="alert" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;html=1;strokeWidth=2;" target="incident" value="Incident Alert">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i2" edge="1" parent="1" source="incident" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;html=1;strokeWidth=2;" target="rotation" value="Get Active On-Call Engineer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i3" edge="1" parent="1" source="incident" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;html=1;strokeWidth=2;" target="notification" value="Send Notification">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i4" edge="1" parent="1" source="incident" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;html=1;strokeWidth=2;" target="postmortem" value="Store / Track Post-Mortem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
